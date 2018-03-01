@@ -19,6 +19,12 @@ ls -a
       }
     }
     stage('build') {
+      agent {
+        node {
+          label 'make'
+        }
+        
+      }
       steps {
         sh 'make all'
       }
