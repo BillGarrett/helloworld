@@ -26,7 +26,9 @@ ls -a
         
       }
       steps {
-        sh 'make all'
+       container('gcc') {
+          sh 'make all'
+        }
       }
     }
   }
