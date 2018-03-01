@@ -1,5 +1,5 @@
 pipeline {
-  agent default
+  agent { label 'default' }
   stages {
     stage('ls') {
       steps {
