@@ -19,7 +19,8 @@ ls -a
       }
       steps {
         container('gcc') {
-          sh '''which make
+          sh '''pwd
+which make
 which gcc
 echo okay
 '''
