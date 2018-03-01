@@ -1,20 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('Hello') {
-      parallel {
-        stage('Hello') {
-          steps {
-            sh 'echo Hello, world!'
-          }
-        }
-        stage('ls') {
-          steps {
-            sh '''whoami
+    stage('ls') {
+      steps {
+        sh '''whoami
 pwd
 ls -a
 '''
-          }
         }
       }
     }
@@ -26,7 +18,7 @@ ls -a
         
       }
       steps {
-       container('gcc') {
+        container('gcc') {
           sh '''which make
 which gcc
 echo okay
