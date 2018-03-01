@@ -18,5 +18,10 @@ ls -a
         }
       }
     }
+    stage('build') {
+      steps {
+        sh 'make all'
+      }
+    }
   }
 }
