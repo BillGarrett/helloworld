@@ -7,7 +7,6 @@ pipeline {
 pwd
 ls -a
 '''
-        }
       }
     }
     stage('build') {
